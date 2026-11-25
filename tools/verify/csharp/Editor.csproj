@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Type-checks the editor setup script against the real UnityEditor reference assembly. -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <AssemblyName>TaxiSim.Editor.Check</AssemblyName>
+    <DefineConstants>$(DefineConstants);UNITY_EDITOR</DefineConstants>
+    <NoWarn>CS1701;CS1702</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../../unity/TaxiManager/Assets/_Project/Scripts/Editor/**/*.cs" />
+    <Reference Include="bin/Debug/netstandard2.1/TaxiSim.World.Check.dll" Private="false" />
+    <Reference Include="../.cache/unityengine/lib/net45/*.dll" Private="false" />
+    <Reference Include="../.cache/unitysdk/lib/UnityEditor.dll" Private="false" />
+  </ItemGroup>
+</Project>

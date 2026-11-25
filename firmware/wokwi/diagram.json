@@ -1,0 +1,349 @@
+{
+  "version": 1,
+  "author": "Autonomous Taxi Manager team",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-ili9341",
+      "id": "tft",
+      "top": -280,
+      "left": 240,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz",
+      "top": -140,
+      "left": -200,
+      "attrs": {
+        "volume": "0.1"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnUp",
+      "top": 100,
+      "left": -320,
+      "attrs": {
+        "color": "blue",
+        "label": "UP"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnDown",
+      "top": 190,
+      "left": -320,
+      "attrs": {
+        "color": "blue",
+        "label": "DOWN"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnLeft",
+      "top": 145,
+      "left": -410,
+      "attrs": {
+        "color": "blue",
+        "label": "LEFT"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnRight",
+      "top": 145,
+      "left": -230,
+      "attrs": {
+        "color": "blue",
+        "label": "RIGHT"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnBack",
+      "top": 280,
+      "left": -410,
+      "attrs": {
+        "color": "grey",
+        "label": "BACK"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnAccept",
+      "top": 280,
+      "left": -230,
+      "attrs": {
+        "color": "green",
+        "label": "ACCEPT"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnReject",
+      "top": 280,
+      "left": -320,
+      "attrs": {
+        "color": "red",
+        "label": "REJECT"
+      }
+    },
+    {
+      "type": "wokwi-analog-joystick",
+      "id": "joyL",
+      "top": 400,
+      "left": -330,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-analog-joystick",
+      "id": "joyR",
+      "top": 400,
+      "left": -200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnInfo",
+      "top": 10,
+      "left": -320,
+      "attrs": {
+        "color": "purple",
+        "label": "INFO"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:TX0",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX0",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "btnUp:1.l",
+      "esp:D15",
+      "green",
+      []
+    ],
+    [
+      "btnUp:2.l",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "btnDown:1.l",
+      "esp:D22",
+      "green",
+      []
+    ],
+    [
+      "btnDown:2.l",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "btnLeft:1.l",
+      "esp:D25",
+      "green",
+      []
+    ],
+    [
+      "btnLeft:2.l",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "btnRight:1.l",
+      "esp:D26",
+      "green",
+      []
+    ],
+    [
+      "btnRight:2.l",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "btnBack:1.l",
+      "esp:D27",
+      "green",
+      []
+    ],
+    [
+      "btnBack:2.l",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "btnAccept:1.l",
+      "esp:D14",
+      "green",
+      []
+    ],
+    [
+      "btnAccept:2.l",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "btnReject:1.l",
+      "esp:D13",
+      "green",
+      []
+    ],
+    [
+      "btnReject:2.l",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "tft:VCC",
+      "esp:VIN",
+      "red",
+      []
+    ],
+    [
+      "tft:GND",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "tft:CS",
+      "esp:D5",
+      "orange",
+      []
+    ],
+    [
+      "tft:RST",
+      "esp:TX2",
+      "violet",
+      []
+    ],
+    [
+      "tft:D/C",
+      "esp:RX2",
+      "purple",
+      []
+    ],
+    [
+      "tft:MOSI",
+      "esp:D23",
+      "blue",
+      []
+    ],
+    [
+      "tft:SCK",
+      "esp:D18",
+      "cyan",
+      []
+    ],
+    [
+      "tft:LED",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "bz:1",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "bz:2",
+      "esp:D21",
+      "green",
+      []
+    ],
+    [
+      "joyL:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "joyL:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "joyL:HORZ",
+      "esp:D32",
+      "orange",
+      []
+    ],
+    [
+      "joyL:VERT",
+      "esp:D33",
+      "orange",
+      []
+    ],
+    [
+      "joyR:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "joyR:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "joyR:HORZ",
+      "esp:VP",
+      "orange",
+      []
+    ],
+    [
+      "joyR:VERT",
+      "esp:VN",
+      "orange",
+      []
+    ],
+    [
+      "btnInfo:1.l",
+      "esp:D19",
+      "green",
+      []
+    ],
+    [
+      "btnInfo:2.l",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "joyR:SEL",
+      "esp:D4",
+      "cyan",
+      []
+    ]
+  ],
+  "dependencies": {}
+}

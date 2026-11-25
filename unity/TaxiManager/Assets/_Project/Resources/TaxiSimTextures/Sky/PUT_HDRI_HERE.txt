@@ -1,0 +1,3 @@
+Drop free CC0 textures here (from ambientCG.com or polyhaven.com). Keep the original file names.
+HDRI sky files (.hdr / .exr) go into the "Sky" sub-folder.
+Full instructions: docs/13-textures-guide.md

@@ -1,0 +1,17 @@
+# Unity
+unity/TaxiManager/[Ll]ibrary/
+unity/TaxiManager/[Tt]emp/
+unity/TaxiManager/[Oo]bj/
+unity/TaxiManager/[Bb]uild/
+unity/TaxiManager/[Ll]ogs/
+unity/TaxiManager/[Uu]ser[Ss]ettings/
+*.csproj.user
+# .NET tests
+sim-tests/bin/
+sim-tests/obj/
+# PlatformIO
+firmware/**/.pio/
+# verification caches
+tools/verify/.cache/
+tools/verify/csharp/bin/
+tools/verify/csharp/obj/

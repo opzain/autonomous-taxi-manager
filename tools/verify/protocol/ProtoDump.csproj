@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Plays a scripted shift through the real Simulation + DispatchConsole and writes the exact
+       PC -> ESP32 line stream (same rules as ConsoleBridge), used to drive the firmware harness. -->
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><LangVersion>9.0</LangVersion><Nullable>disable</Nullable></PropertyGroup>
+  <ItemGroup><Compile Include="../../../unity/TaxiManager/Assets/_Project/Scripts/Core/**/*.cs" LinkBase="Core" /></ItemGroup>
+</Project>
